@@ -18,7 +18,7 @@ struct NewGroupView: View {
     var onSave: (TaskGroup) -> ()
     
     var body: some View {
-        NavigationStack {
+        NavigationStack { 
             Form{
                 Section("Group Name"){
                     TextField("e.g. Work", text: $groupName)

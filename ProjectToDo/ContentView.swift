@@ -4,14 +4,18 @@
 //
 //  Created by Jay Chestnut on 4/13/26.
 //
+//
 
 import SwiftUI
 
 struct ContentView: View {
-    @State private var taskGroups = TaskGroup.sampleData // See MockData
+    @State private var taskGroups : [TaskGroup] = [] // See MockData
     @State private var selectedGroup: TaskGroup? // selected group
     @State private var columnVisibility: NavigationSplitViewVisibility = .all // navigation side panel
     @State private var isShowingAddGroup = false
+    @Environment(\.scenePhase) private var scenePhase
+    let saveKey = "taskGroupData"
+    
     
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
