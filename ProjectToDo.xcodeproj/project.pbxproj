@@ -16,6 +16,11 @@
 			path = ProjectToDo;
 			sourceTree = "<group>";
 		};
+		CF5F88A72FB4D38A00D96BFE /* ToDo TaskUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "ToDo TaskUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +39,7 @@
 			children = (
 				CF5F88702F8DCB4200D96BFE /* ProjectToDo */,
 				CF5F886F2F8DCB4200D96BFE /* Products */,
+				CF5F88A72FB4D38A00D96BFE /* ToDo TaskUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +68,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				CF5F88702F8DCB4200D96BFE /* ProjectToDo */,
+				CF5F88A72FB4D38A00D96BFE /* ToDo TaskUITests */,
 			);
 			name = ProjectToDo;
 			packageProductDependencies = (

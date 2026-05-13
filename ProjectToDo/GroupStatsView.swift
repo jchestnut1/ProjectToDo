@@ -1,47 +1,42 @@
-//
-//  GroupStatsView.swift
-//  ProjectToDo
-//
-//  Created by Jay Chestnut on 4/15/26.
-//
-
-
 
 import SwiftUI
 
 struct GroupStatsView: View {
     var tasks: [TaskItem]
-    var completedCount: Int {tasks.filter{$0.isCompleted}.count}
-    var progress: Double {tasks.isEmpty ? 0 : Double(completedCount) / Double(tasks.count)}
-    
+    var completedCount: Int { tasks.filter {$0.isCompleted}.count }
+    var progress: Double { tasks.isEmpty ? 0 : Double(completedCount) / Double(tasks.count)}
     
     var body: some View {
-        
         HStack {
-            ZStack{
+            ZStack {
                 Circle()
                     .stroke(lineWidth: 10)
                     .opacity(0.3)
                     .foregroundColor(.cyan)
+                
                 Circle()
                     .trim(from: 0.0, to: progress)
                     .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                    .foregroundColor(.cyan)
                     .rotationEffect(.degrees(-90))
                 Text("\(Int(progress * 100))%")
                     .font(.caption)
                     .bold()
+                    .accessibilityIdentifier("ProgressPercentageText")
             }
-            .frame(width:60, height: 60)
+            .frame(width: 60, height: 60)
             .padding()
             
-            VStack(alignment: .leading){
+            VStack(alignment: .leading) {
                 Text("Task Progress")
-                Text("\(completedCount) / \(tasks.count)")
+                    .font(.headline)
+                Text("\(completedCount) / \(tasks.count) Completed")
+                    .accessibilityIdentifier("ProgressCountLabel")
             }
             Spacer()
         }
         .padding()
         .background(Color(.secondarySystemBackground))
-        
+        .accessibilityIdentifier("GroupStatsContainer")
     }
 }

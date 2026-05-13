@@ -1,0 +1,102 @@
+
+import XCTest
+
+final class ToDo_TaskUITests: XCTestCase {
+    let app = XCUIApplication()
+    override func setUpWithError() throws {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        // In UI tests it is usually best to stop immediately when a failure occurs.
+        continueAfterFailure = false
+        
+        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    }
+    
+    override func tearDownWithError() throws {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+    
+    func testLaunchInEnglish() {
+        // 1. Force the app to launch in a language
+        app.launchArguments = ["-AppleLanguages", "(en)"]
+        app.launch()
+        
+        let header = app.staticTexts["Who is working today?"]
+        XCTAssertTrue(header.exists, "The english header was not found")
+    }
+    func testLaunchInSpanish() {
+        // 1. Force the app to launch in a language
+        app.launchArguments = ["-AppleLanguages", "(es)"]
+        app.launch()
+        
+        let header = app.staticTexts["¿Quién está trabajando hoy?"]
+        XCTAssertTrue(header.exists, "The spanish header was not found")
+    }
+    
+    func testCreateNewTaskGroup(){
+        app.launch()
+        
+        let profileCard = app.buttons["ProfileCard_Professor"]
+        XCTAssertTrue(profileCard.exists)
+        profileCard.tap()
+        
+        let addButton = app.buttons["AddGroupButton"]
+        XCTAssertTrue(addButton.exists)
+        addButton.tap()
+        
+        let nameField = app.textFields["GroupNameTextField"]
+        XCTAssertTrue(nameField.exists)
+        nameField.tap()
+        nameField.typeText("Testing Group")
+        
+        let iconButton = app.images["Icon_house.fill"]
+        iconButton.tap()
+        
+        app.buttons["SaveGroupButton"].tap()
+        
+        XCTAssertTrue(app.buttons["GroupLink_Testing Group"].exists)
+    }
+    
+    func testNavigationToTaskGroup() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let professorCard = app.buttons["ProfileCard_Professor"]
+        XCTAssertTrue(professorCard.exists, "The Professor card should be visible")
+        professorCard.tap()
+        
+        let groceriesGroup = app.buttons["GroupLink_Groceries"]
+        XCTAssertTrue(groceriesGroup.waitForExistence(timeout: 2), "The groceroes group should be visible")
+        groceriesGroup.tap()
+        
+        let detailTitle = app.navigationBars["Groceries"]
+        XCTAssertTrue(detailTitle.exists, "The navigation bar title should display the name of the group")
+    }
+    
+    func testTaskLifecycle_AddCompleteDelete() {
+        let app = XCUIApplication()
+        app.launch()
+
+        app.buttons["ProfileCard_Professor"].tap()
+        app.buttons["GroupLink_Home"].tap()
+
+        let addTaskButton = app.buttons["AddTaskButton"]
+        XCTAssertTrue(addTaskButton.exists)
+        addTaskButton.tap()
+
+        let allTextFields = app.textFields
+        let lastTaskField = allTextFields.element(boundBy: allTextFields.count - 1)
+        lastTaskField.tap()
+        lastTaskField.typeText("Grade Midterms")
+        app.keyboards.buttons["Return"].tap()
+
+
+        lastTaskField.swipeLeft()
+        app.buttons["Delete"].tap()
+
+
+        let expectation = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: lastTaskField)
+        let result = XCTWaiter().wait(for: [expectation], timeout: 3)
+        XCTAssertEqual(result, .completed, "The task should be removed from the list after deletion.")
+    }
+}
