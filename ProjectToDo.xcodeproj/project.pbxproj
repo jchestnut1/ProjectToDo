@@ -6,8 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		CF5F88BB2FB5598000D96BFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF5F88662F8DCB4200D96BFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF5F886D2F8DCB4200D96BFE;
+			remoteInfo = ProjectToDo;
+		};
+		CF5F88D52FB55A3900D96BFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF5F88662F8DCB4200D96BFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF5F886D2F8DCB4200D96BFE;
+			remoteInfo = ProjectToDo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CF5F886E2F8DCB4200D96BFE /* ProjectToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5F88B52FB5598000D96BFE /* ProjectToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5F88D12FB55A3900D96BFE /* ProjectToDoUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectToDoUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,15 +35,34 @@
 			path = ProjectToDo;
 			sourceTree = "<group>";
 		};
-		CF5F88A72FB4D38A00D96BFE /* ToDo TaskUITests */ = {
+		CF5F88B62FB5598000D96BFE /* ProjectToDoUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "ToDo TaskUITests";
+			path = ProjectToDoUITests;
+			sourceTree = "<group>";
+		};
+		CF5F88D22FB55A3900D96BFE /* ProjectToDoUnitTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ProjectToDoUnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CF5F886B2F8DCB4200D96BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5F88B22FB5598000D96BFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5F88CE2FB55A3900D96BFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,8 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				CF5F88702F8DCB4200D96BFE /* ProjectToDo */,
+				CF5F88B62FB5598000D96BFE /* ProjectToDoUITests */,
+				CF5F88D22FB55A3900D96BFE /* ProjectToDoUnitTests */,
 				CF5F886F2F8DCB4200D96BFE /* Products */,
-				CF5F88A72FB4D38A00D96BFE /* ToDo TaskUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				CF5F886E2F8DCB4200D96BFE /* ProjectToDo.app */,
+				CF5F88B52FB5598000D96BFE /* ProjectToDoUITests.xctest */,
+				CF5F88D12FB55A3900D96BFE /* ProjectToDoUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,7 +109,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				CF5F88702F8DCB4200D96BFE /* ProjectToDo */,
-				CF5F88A72FB4D38A00D96BFE /* ToDo TaskUITests */,
 			);
 			name = ProjectToDo;
 			packageProductDependencies = (
@@ -76,6 +116,52 @@
 			productName = ProjectToDo;
 			productReference = CF5F886E2F8DCB4200D96BFE /* ProjectToDo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CF5F88B42FB5598000D96BFE /* ProjectToDoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5F88BD2FB5598000D96BFE /* Build configuration list for PBXNativeTarget "ProjectToDoUITests" */;
+			buildPhases = (
+				CF5F88B12FB5598000D96BFE /* Sources */,
+				CF5F88B22FB5598000D96BFE /* Frameworks */,
+				CF5F88B32FB5598000D96BFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF5F88BC2FB5598000D96BFE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CF5F88B62FB5598000D96BFE /* ProjectToDoUITests */,
+			);
+			name = ProjectToDoUITests;
+			packageProductDependencies = (
+			);
+			productName = ProjectToDoUITests;
+			productReference = CF5F88B52FB5598000D96BFE /* ProjectToDoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		CF5F88D02FB55A3900D96BFE /* ProjectToDoUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5F88D72FB55A3900D96BFE /* Build configuration list for PBXNativeTarget "ProjectToDoUnitTests" */;
+			buildPhases = (
+				CF5F88CD2FB55A3900D96BFE /* Sources */,
+				CF5F88CE2FB55A3900D96BFE /* Frameworks */,
+				CF5F88CF2FB55A3900D96BFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF5F88D62FB55A3900D96BFE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CF5F88D22FB55A3900D96BFE /* ProjectToDoUnitTests */,
+			);
+			name = ProjectToDoUnitTests;
+			packageProductDependencies = (
+			);
+			productName = ProjectToDoUnitTests;
+			productReference = CF5F88D12FB55A3900D96BFE /* ProjectToDoUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -89,6 +175,14 @@
 				TargetAttributes = {
 					CF5F886D2F8DCB4200D96BFE = {
 						CreatedOnToolsVersion = 26.1.1;
+					};
+					CF5F88B42FB5598000D96BFE = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = CF5F886D2F8DCB4200D96BFE;
+					};
+					CF5F88D02FB55A3900D96BFE = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = CF5F886D2F8DCB4200D96BFE;
 					};
 				};
 			};
@@ -107,12 +201,28 @@
 			projectRoot = "";
 			targets = (
 				CF5F886D2F8DCB4200D96BFE /* ProjectToDo */,
+				CF5F88B42FB5598000D96BFE /* ProjectToDoUITests */,
+				CF5F88D02FB55A3900D96BFE /* ProjectToDoUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CF5F886C2F8DCB4200D96BFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5F88B32FB5598000D96BFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5F88CF2FB55A3900D96BFE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,7 +239,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CF5F88B12FB5598000D96BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5F88CD2FB55A3900D96BFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF5F88BC2FB5598000D96BFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF5F886D2F8DCB4200D96BFE /* ProjectToDo */;
+			targetProxy = CF5F88BB2FB5598000D96BFE /* PBXContainerItemProxy */;
+		};
+		CF5F88D62FB55A3900D96BFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF5F886D2F8DCB4200D96BFE /* ProjectToDo */;
+			targetProxy = CF5F88D52FB55A3900D96BFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CF5F88772F8DCB4300D96BFE /* Debug */ = {
@@ -313,6 +450,84 @@
 			};
 			name = Release;
 		};
+		CF5F88BE2FB5598000D96BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.114-project.ProjectToDoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ProjectToDo;
+			};
+			name = Debug;
+		};
+		CF5F88BF2FB5598000D96BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.114-project.ProjectToDoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ProjectToDo;
+			};
+			name = Release;
+		};
+		CF5F88D82FB55A3900D96BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.114-project.ProjectToDoUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectToDo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProjectToDo";
+			};
+			name = Debug;
+		};
+		CF5F88D92FB55A3900D96BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.114-project.ProjectToDoUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProjectToDo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProjectToDo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -330,6 +545,24 @@
 			buildConfigurations = (
 				CF5F887A2F8DCB4300D96BFE /* Debug */,
 				CF5F887B2F8DCB4300D96BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF5F88BD2FB5598000D96BFE /* Build configuration list for PBXNativeTarget "ProjectToDoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5F88BE2FB5598000D96BFE /* Debug */,
+				CF5F88BF2FB5598000D96BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF5F88D72FB55A3900D96BFE /* Build configuration list for PBXNativeTarget "ProjectToDoUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5F88D82FB55A3900D96BFE /* Debug */,
+				CF5F88D92FB55A3900D96BFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
